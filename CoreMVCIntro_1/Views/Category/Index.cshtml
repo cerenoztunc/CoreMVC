@@ -1,0 +1,23 @@
+﻿@model CategoryVM
+@{
+    ViewData["Title"] = "Index";
+}
+<table>
+    <thead>
+        <tr>
+            <th>Kategor Ismi</th>
+            <th>Kategori Acıklaması</th>
+            <th colspan="2">Islemler</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Category item in Model.Categories)
+        {
+            <tr>
+                <td>@item.CategoryName</td>
+                <td>@item.Description</td>
+                
+            </tr>
+        }
+    </tbody>
+</table>
